@@ -1,0 +1,32 @@
+# 运行时数据（首次访问会自动重建）
+storage/app.db
+storage/app.db-wal
+storage/app.db-shm
+storage/logs/*.log
+storage/sessions/*
+storage/exports/*
+storage/*.pdf
+
+# 本地配置（数据库账号密码，不入库）
+app/config.local.php
+
+# 个人报告（含姓名/学号，默认不入库；想让仓库带报告就删掉下面两行）
+实验报告-智能客服系统.docx
+实验报告-智能客服系统.pdf
+
+# 个人笔记/交接文档（含个人信息，仅本地保留）
+回家继续-先读我.md
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 压缩包
+*.zip
+
+# Office/WPS 临时锁文件
+~$*
+*.tmp
+.~lock.*

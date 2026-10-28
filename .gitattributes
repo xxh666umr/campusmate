@@ -1,0 +1,15 @@
+# 统一换行符，避免 Windows / macOS / Linux 之间签出后 start.bat 或脚本损坏
+* text=auto
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.sh  text eol=lf
+*.php text eol=lf
+*.py  text eol=lf
+*.js  text eol=lf
+*.css text eol=lf
+*.md  text eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.pdf binary
+*.docx binary
