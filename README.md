@@ -7,6 +7,7 @@
 ![SQLite](https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?logo=javascript&logoColor=black)
 ![Tests](https://img.shields.io/badge/API%20tests-18%20passed-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
 PHP 程序设计「综合设计：智能 web 系统设计与实现」完整实现。
 技术栈：PHP 8.0+（XAMPP 8.0.30 实测）+ PDO（MySQL / SQLite）+ 原生 JS（AJAX / Canvas）+ 讯飞星火大模型（可切换本地演示引擎）。
@@ -296,3 +297,10 @@ A：`start.bat` 会检测到端口已在运行并直接打开浏览器；若确�
 | 实验报告 | 封面已填写（姓名/学号/班级/实验地点），docx 与 PDF 同步，共 16 页（LibreOffice 渲染） |
 
 > 星火接入的完整核对明细见 `docs/星火接入核查报告.md`；拿到 APPID/APIKey/APISecret 后按第四节配置即可切换真实大模型。
+
+---
+
+## 许可证
+
+本项目基于 [MIT License](LICENSE) 开源：可以自由使用、修改、分发和二次开发，保留版权声明即可。
+
