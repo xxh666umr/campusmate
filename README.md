@@ -1,7 +1,40 @@
 # 智服 CampusMate · 校园智能客服
 
-> PHP 程序设计「综合设计：智能 web 系统设计与实现」完整实现
-> 技术栈：PHP 8.0+（XAMPP 8.0.30 实测）+ PDO（MySQL / SQLite）+ 原生 JS（AJAX / Canvas）+ 讯飞星火大模型（可切换本地演示引擎）
+> 一个用 PHP 手写的校园智能客服系统：三种咨询方式、RAG-lite 知识库检索、情绪识别转人工、对话转工单闭环、Canvas 数据看板；内置讯飞星火 WebSocket 客户端，没有密钥时自动降级为本地演示引擎，断网也能完整演示。
+
+![PHP](https://img.shields.io/badge/PHP-8.0%2B-777BB4?logo=php&logoColor=white)
+![MariaDB](https://img.shields.io/badge/MariaDB%20%2F%20MySQL-10.4-4479A1?logo=mysql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?logo=javascript&logoColor=black)
+![Tests](https://img.shields.io/badge/API%20tests-18%20passed-brightgreen)
+
+PHP 程序设计「综合设计：智能 web 系统设计与实现」完整实现。
+技术栈：PHP 8.0+（XAMPP 8.0.30 实测）+ PDO（MySQL / SQLite）+ 原生 JS（AJAX / Canvas）+ 讯飞星火大模型（可切换本地演示引擎）。
+
+## 界面预览
+
+| 登录 / 注册 | 智能客服（单轮问答·带依据） |
+| :---: | :---: |
+| ![登录页](shots/01-login.png) | ![智能客服](shots/03-chat-answer.png) |
+
+| 数据看板（Canvas 绘制） | 日志管理（正则筛选） |
+| :---: | :---: |
+| ![数据看板](shots/07-stats.png) | ![日志管理](shots/09-logs.png) |
+
+| 信息选择（引导式问答） | 工单管理 |
+| :---: | :---: |
+| ![信息选择](shots/05-guided-answer.png) | ![工单管理](shots/10-tickets.png) |
+
+> 截图来自本机演示数据；全部 11 张截图见 [`shots/`](shots/)，5 分钟验收流程见 [`docs/验收演示脚本.md`](docs/验收演示脚本.md)。
+
+## 文档导航
+
+| 文档 | 内容 |
+| --- | --- |
+| [`docs/验收演示脚本.md`](docs/验收演示脚本.md) | 5–8 分钟验收 / 答辩演示流程，含可能被问到的问题 |
+| [`docs/星火接入核查报告.md`](docs/星火接入核查报告.md) | 星火 WebSocket 协议逐项核对、网络实测与错误码处理 |
+| [`schema/mysql.sql`](schema/mysql.sql) | MySQL 建表脚本（也可由程序自动建表） |
+| [`tools/`](tools/) | 18 项接口回归、星火自检、报告封面脚本等辅助工具 |
 
 ---
 
