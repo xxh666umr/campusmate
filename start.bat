@@ -13,7 +13,7 @@ echo ============================================
 echo   智服 CampusMate - 校园智能客服
 echo   地址: http://127.0.0.1:%PORT%
 echo   账号: admin / admin123
-echo   停止: Ctrl + C  （MySQL 若由本脚本启动，会另开最小化窗口）
+echo   停止: Ctrl + C（MySQL 也会一起停止，重启电脑后再次运行即可）
 echo ============================================
 
 rem ---------- 0. 端口已被占用则直接开浏览器 ----------
@@ -66,8 +66,9 @@ if not exist "%MYINI%" (
     goto :eof
 )
 
-echo        正在启动 MySQL（最小化窗口）...
-start "MySQL - 智服" /min "%MYSQLD%" --defaults-file="%MYINI%" --standalone
+echo        正在启动 MySQL ...
+rem 用 start /b 在同一窗口后台启动，避免最小化窗口被误关导致 MySQL 掉线
+start "" /b "%MYSQLD%" --defaults-file="%MYINI%" --standalone
 set /a _wait=0
 :wait_mysql
 ping -n 2 127.0.0.1 >nul
@@ -77,7 +78,8 @@ if not errorlevel 1 (
     echo        MySQL 已就绪（等待 %_wait% 秒）
     goto :eof
 )
-if %_wait% lss 20 goto :wait_mysql
-echo        [警告] MySQL 20 秒内未就绪，页面会给出中文提示
-echo        也可打开 XAMPP Control Panel 点 MySQL 的 Start
+if %_wait% lss 25 goto :wait_mysql
+echo        [警告] MySQL 25 秒内未就绪，页面会显示中文提示
+echo        请打开 XAMPP Control Panel 点 MySQL 的 Start 后刷新页面
+echo        应急方案：把 app\config.local.php 里 driver 改成 sqlite，可零配置演示
 goto :eof
